@@ -49,6 +49,7 @@ type WavFmtChunkData struct {
 type DataReader interface {
 	io.Reader
 	io.ReaderAt
+	io.Seeker // add this interface for the Seek() method
 }
 
 type DataReaderChunk struct {
